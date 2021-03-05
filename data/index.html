@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>ESP IOT DASHBOARD</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" type="text/css" href="style.css">
+ <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+ <div class="topnav">
+    <h1>Web Server</h1>
+ </div>
+<div class="card-grid"> 
+    <div class="card">
+      <p class="card-title">D0</p>
+        <label class="switch">
+            <input type="checkbox" id=D0 onclick='sendMessage()'>
+            <span class="slider"></span>
+        </label>
+    </div>
+    <div class="card"><p class="card-title">D1</p>
+        <label class="switch">
+            <input type="checkbox" id='D1' onclick='sendMessage()'>
+            <span class="slider"></span>
+        </label>
+    </div>
+    
+    <div class="card"><p class="card-title">D2</p>
+        <label class="Led">
+            <input type="checkbox" id='D2' disabled="true" onclick='sendMessage()'>
+            <span class="LedLight"></span>
+        </lable>
+    </div>
+
+    <div class="card"><p class="card-title">D3</p>
+        <label class="Led">
+            <input type="checkbox" id='D3' disabled="true" onclick='sendMessage()'>
+            <span class="LedLight"></span>
+        </lable>
+    </div>
+
+    <div class="card"><p class="card-title">D4</p>   
+        <input type="range" id='D4' min="0" max="1023" oninput="sendMessage()" step="1" value="0">        
+    </div>
+
+    <div class="card"><p class="card-title">A0</p>   
+        <progress id='A0' value="50" max="1023"> Test </progress>        
+    </div>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
